@@ -1,7 +1,9 @@
 namespace DL;
 
-public interface IREPO{
-
+public interface IREPO
+{
+    List<AboutPlayer> GetAboutPlayers();
+    
 
 
     

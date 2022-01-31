@@ -24,11 +24,11 @@ namespace DL.Migrations
 
             modelBuilder.Entity("Models.AboutPlayer", b =>
                 {
-                    b.Property<int?>("AboutPlayerID")
+                    b.Property<int?>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("AboutPlayerID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("ID"));
 
                     b.Property<string>("FavoriteGames")
                         .HasColumnType("text");
@@ -42,40 +42,47 @@ namespace DL.Migrations
                     b.Property<int?>("GamesWon")
                         .HasColumnType("integer");
 
-                    b.HasKey("AboutPlayerID");
+                    b.Property<int?>("PlayerID")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("PlayerID");
 
                     b.ToTable("AboutPlayer");
                 });
 
             modelBuilder.Entity("Models.Game", b =>
                 {
-                    b.Property<int?>("GameID")
+                    b.Property<int?>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("GameID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("ID"));
 
                     b.Property<string>("GameName")
                         .HasColumnType("text");
 
+                    b.Property<int?>("PlayerCount")
+                        .HasColumnType("integer");
+
                     b.Property<int?>("PlayerID")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("playerCount")
-                        .HasColumnType("integer");
+                    b.HasKey("ID");
 
-                    b.HasKey("GameID");
+                    b.HasIndex("PlayerID");
 
                     b.ToTable("Game");
                 });
 
             modelBuilder.Entity("Models.Player", b =>
                 {
-                    b.Property<int?>("PlayerID")
+                    b.Property<int?>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("PlayerID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("ID"));
 
                     b.Property<string>("Password")
                         .HasColumnType("text");
@@ -86,7 +93,7 @@ namespace DL.Migrations
                     b.Property<string>("Username")
                         .HasColumnType("text");
 
-                    b.HasKey("PlayerID");
+                    b.HasKey("ID");
 
                     b.HasIndex("RoomID");
 
@@ -95,11 +102,11 @@ namespace DL.Migrations
 
             modelBuilder.Entity("Models.Room", b =>
                 {
-                    b.Property<int?>("RoomID")
+                    b.Property<int?>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("RoomID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("ID"));
 
                     b.Property<int?>("PlayerCount")
                         .HasColumnType("integer");
@@ -110,9 +117,27 @@ namespace DL.Migrations
                     b.Property<string>("RoomName")
                         .HasColumnType("text");
 
-                    b.HasKey("RoomID");
+                    b.HasKey("ID");
 
                     b.ToTable("Room");
+                });
+
+            modelBuilder.Entity("Models.AboutPlayer", b =>
+                {
+                    b.HasOne("Models.Player", "Player")
+                        .WithMany()
+                        .HasForeignKey("PlayerID");
+
+                    b.Navigation("Player");
+                });
+
+            modelBuilder.Entity("Models.Game", b =>
+                {
+                    b.HasOne("Models.Player", "Player")
+                        .WithMany()
+                        .HasForeignKey("PlayerID");
+
+                    b.Navigation("Player");
                 });
 
             modelBuilder.Entity("Models.Player", b =>
