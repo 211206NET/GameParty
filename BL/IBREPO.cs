@@ -1,6 +1,7 @@
 namespace BL;
 
-public interface IBREPO{
+public interface IBREPO
+{
 
 
 

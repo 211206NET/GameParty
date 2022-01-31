@@ -1,6 +1,7 @@
 namespace BL;
 
-public class BLParty:IBREPO{
+public class BLParty : IBREPO
+{
 
 
 
