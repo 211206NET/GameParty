@@ -42,10 +42,6 @@ button:hover {
   margin: 24px 0 12px 0;
 }
 
-.container {
-  padding: 16px;
-}
-
 span.psw {
   float: right;
   padding-top: 16px;
@@ -53,6 +49,7 @@ span.psw {
 .container{
   max-width: 1400px;
   margin: 0px auto;
+  padding: 15px;
 }
 .row{
   display: flex;
@@ -85,5 +82,5 @@ span.psw {
 }
 .full{
   flex-grow: 0;
-  width: 96%;
+  width: 100%;
 }
