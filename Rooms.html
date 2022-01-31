@@ -11,17 +11,33 @@
 <body>
     <H1> </H1>
 
-   
+     
       <h2> Create a room </h2>
-      
+      <button type="button" onClick="location.href='https://socket.io/'">Create</button>
       
       <h2> Join a room </h2>
-      <p> Please enter game room code </p>
+      <!--<button type="button" onClick="">Join</button>-->
+      <details class="details-example">
+        <summary>Available Rooms</summary>
+        <ul>
+            <li>room</li>
+            <li>room</li>
+            <li>room</li>
+        </ul>
+    </details>
+
+      <h2><p> Please enter game room code </p></h2>
       <label for="fname">Game Code</label><br>
       <input type="number" id="gamecode" name="fname" value="enter code here"><br>
-      <form> <input type="button" value="">
+      <form>
+           <input type="button" value="">
       </form>
+
       <h2> manage account </h2>
+      <!--
+          This will have player profile
+          with all info., maybe make changes?
+      -->
 
 </body>
 </html>
