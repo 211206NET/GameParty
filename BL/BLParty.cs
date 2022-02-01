@@ -50,19 +50,35 @@ public class BLParty : IBRepo
     //Add
     public AboutPlayer addAboutPlayer(AboutPlayer aboutPlayerToAdd)
     {
-        return _dl.addAboutPlayer(aboutPlayerToAdd);
+        if(!_dl.isDuplicate(aboutPlayerToAdd))
+        {
+            return _dl.addAboutPlayer(aboutPlayerToAdd);
+        }
+        else throw new DuplicateRecordException("Player already has an about me");
     }
     public Game addGame(Game gameToAdd)
     {
-        return _dl.addGame(gameToAdd);
+        if(!_dl.isDuplicate(gameToAdd))
+        {
+            return _dl.addGame(gameToAdd);
+        }
+        else throw new DuplicateRecordException("Game name already exist");        
     }
     public Player addPlayer(Player playerToAdd)
     {
-        return _dl.addPlayer(playerToAdd);
+        if(!_dl.isDuplicate(playerToAdd))
+        {
+            return _dl.addPlayer(playerToAdd);
+        }
+        else throw new DuplicateRecordException("Username already exist");       
     }
     public Room addRoom(Room roomToAdd)
     {
-        return _dl.addRoom(roomToAdd);
+        if(!_dl.isDuplicate(roomToAdd))
+        {
+            return _dl.addRoom(roomToAdd);
+        }
+        else throw new DuplicateRecordException("Room name already exist");       
     }
 
     
