@@ -6,40 +6,40 @@ namespace WebParty.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RoomController : ControllerBase
+    public class AboutPlayerController : ControllerBase
     {
         IBRepo _bl;
-        public RoomController(IBRepo bl)
+        public AboutPlayerController(IBRepo bl)
         {
             _bl = bl;
         }
-        // GET: api/<RoomController>
+        // GET: api/<AboutPlayerController>
         [HttpGet]
-        public List<Room> Get()
+        public List<AboutPlayer> Get()
         {
-            return _bl.GetRooms();
+            return _bl.GetAboutPlayers();
         }
 
-        // GET api/<RoomController>/5
+        // GET api/<AboutPlayerController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<RoomController>
+        // POST api/<AboutPlayerController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/<RoomController>/5
+        // PUT api/<AboutPlayerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/<RoomController>/5
+        // DELETE api/<AboutPlayerController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

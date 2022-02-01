@@ -9,38 +9,43 @@
     <script type="text/javascript" src="Java.js"></script>
 </head>
 <body>
-    <H1> Welcome to Mario Party</H1>
-
-   <h2> Sign In</h2>
-    <form action="/action_page.php" method="post">
+  <div class="row">
+  <H1 class="col" class="full"> Welcome to Mario Party</H1>
+  <h2 class ="col" class="full"> A place for you and your friends to chill and play some games</h2>
+  </div>
+   
+  <div class row>
+  <h2> Sign In</h2>
+    <form id="LoginForm">
       
-        <div class="container">
+        <div class="container" class= "row">
           <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <input type="text" placeholder="Enter Username" name="username" required>
       
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" name="password" required>
               
-          <button type="submit">Login</button>
-          
+          <button onclick=LoginPlayer()  type="submit">Login</button>
         </div>
       </form>
-      <h2> Create and account </h2>
-      <form action="/action_page.php" method="post">
+      </div>
       
-        <div class="container">
+      <div class row>
+      <h2>New to GameParty? </h2> 
+      <h3> Create an account </h3>
+      <form id="signupForm">
+      
+        <div class="container" class= "row">
           <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <input type="text" placeholder="Enter Username" name="newusername" required>
       
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" name="newpassword" required>
               
-          <button type="submit">Login</button>
+          <button onclick=SignupPlayer() type="submit">Create Account</button>
           
         </div>
-      </form>
-
-    
-
-</body>
+       </form>
+      </div>
+  </body>
 </html>
