@@ -43,8 +43,10 @@ namespace WebParty.Controllers
 
         // DELETE api/<PlayerController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int PlayerID)
         {
+            _bl.deletePlayer(PlayerID);
+            return Ok();
         }
     }
 }

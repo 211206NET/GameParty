@@ -29,9 +29,12 @@ namespace WebParty.Controllers
 
         // POST api/<GameController>
         [HttpPost]
-        public void Post([FromBody] string value)
+       public ActionResult<Game> Post([FromBody] Game gameToAdd)
         {
+            _bl.addGame(gameToAdd);
+            return Created("Sucessfully Created", gameToAdd);
         }
+
 
         // PUT api/<GameController>/5
         [HttpPut("{id}")]
@@ -41,8 +44,10 @@ namespace WebParty.Controllers
 
         // DELETE api/<GameController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int GameID)
         {
+            _bl.deleteGame(GameID);
+            return Ok();
         }
     }
 }

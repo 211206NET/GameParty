@@ -29,8 +29,10 @@ namespace WebParty.Controllers
 
         // POST api/<RoomController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Room> Post([FromBody] Room roomToAdd)
         {
+            _bl.addRoom(roomToAdd);
+            return Created("Sucessfully Created", roomToAdd);
         }
 
         // PUT api/<RoomController>/5
@@ -41,8 +43,10 @@ namespace WebParty.Controllers
 
         // DELETE api/<RoomController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int RoomID)
         {
+            _bl.deleteRoom(RoomID);
+            return Ok();
         }
     }
 }
