@@ -14,8 +14,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DbContext, PRDBContext>(options => options.UseNpgsql(
     builder.Configuration.GetConnectionString("PartyDB")));
 
-builder.Services.AddScoped<IREPO, DBParty>();
-builder.Services.AddScoped<IBREPO, BLParty>();
+builder.Services.AddScoped<IRepo, DBParty>();
+builder.Services.AddScoped<IBRepo, BLParty>();
 
 
 var app = builder.Build();
