@@ -17,6 +17,23 @@ public class DBParty : IRepo
         AboutPlayer? dupe = _context.AboutPlayer.FirstOrDefault(a => a.Player == aboutPlayer.Player);
         return dupe != null;
     }
+    public bool isDuplicate(Game game)
+    {
+        Game? dupe = _context.Game.FirstOrDefault(g => g.GameName == game.GameName);
+        return dupe != null;
+    }
+    public bool isDuplicate(Player player)
+    {
+        Player? dupe = _context.Player.FirstOrDefault(p => p.Username == player.Username);
+        return dupe != null;
+    }
+    public bool isDuplicate(Room room)
+    {
+        Room? dupe = _context.Room.FirstOrDefault(r => r.RoomName == room.RoomName);
+        return dupe != null;
+    }
+
+    
     //Get Alls
     public List<AboutPlayer> GetAboutPlayers()
     {
