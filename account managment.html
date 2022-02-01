@@ -8,11 +8,51 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="Java.js"></script>
 </head>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+  
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
 <body>
-    <H1> Account management </H1>
-    <h2> About </h2>
-    <h2> favorite games </h2>
-    <h2>game library </h2> 
-    <h2>stats (wins/loss)</h2> 
+    
+
+</script>
+   
+    <div class="navbar">
+        <a class="active" href="#"><i class="fa fa-fw fa-Account Management"></i> Account Management</a> 
+        <a href="#"><i class="fa fa-fw fa-About"></i> About</a> 
+        <a href="#"><i class="fa fa-fw fa-Favorite Games"></i> Favorite Games</a> 
+        <a href="#"><i class="fa fa-fw fa-Library"></i> Library</a>
+        <a href="#"><i class="fa fa-fw fa-Stats (wins/loss)"></i>Stats (wins/loss)</a>
+    </div> 
+    
 </body>
 </html>
