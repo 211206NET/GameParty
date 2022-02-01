@@ -2,9 +2,9 @@ namespace BL;
 
 public class BLParty : IBRepo
 {
-    private IBRepo _dl;
+    private IRepo _dl;
 
-    public BLParty(IBRepo repo)
+    public BLParty(IRepo repo)
     {
         _dl = repo;
     }

@@ -29,8 +29,10 @@ namespace WebParty.Controllers
 
         // POST api/<PlayerController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Player> Post([FromBody] Player playerToAdd)
         {
+            _bl.addPlayer(playerToAdd);
+            return Created("Sucessfully Created", playerToAdd);
         }
 
         // PUT api/<PlayerController>/5
