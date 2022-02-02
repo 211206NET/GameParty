@@ -1,11 +1,10 @@
 {
   "name": "gameparty",
   "version": "1.0.0",
-  "description": "chatroom with games ",
-  "main": "server.js",
+  "description": "game party",
+  "main": "index.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "serve": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +17,7 @@
   },
   "homepage": "https://github.com/211206NET/GameParty#readme",
   "dependencies": {
-    "express": "^4.17.2",
-    "moment": "^2.29.1",
+    "nodemon": "^2.0.15",
     "socket.io": "^4.4.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }
