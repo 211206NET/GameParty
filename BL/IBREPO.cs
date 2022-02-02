@@ -23,8 +23,8 @@ public interface IBRepo
     Room addRoom(Room roomToAdd);
 
     //Delete
-    void deleteAboutPlayer(AboutPlayer aboutPlayerToDelete);
-    void deleteGame(Game gameToDelete);
-    void deletePlayer(Player playerToDelete);
-    void deleteRoom(Room roomToDelete);
+    void deleteAboutPlayer(int aboutplayersID);
+    void deleteGame(int gameID);
+    void deletePlayer(int playerID);
+    void deleteRoom(int roomID);
 }

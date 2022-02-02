@@ -83,21 +83,21 @@ public class BLParty : IBRepo
 
     
     //Delete 
-    public void deleteAboutPlayer(AboutPlayer aboutPlayerToDelete)
+    public void deleteAboutPlayer(int aboutplayersID)
     {
-        _dl.deleteAboutPlayer(aboutPlayerToDelete);
+        _dl.deleteAboutPlayer(aboutplayersID);
     }
-    public void deleteGame(Game gameToDelete)
+    public void deleteGame(int gameID)
     {
-        _dl.deleteGame(gameToDelete);
+        _dl.deleteGame(gameID);
     }
-    public void deletePlayer(Player playerToDelete)
+    public void deletePlayer(int playerID)
     {
-        _dl.deletePlayer(playerToDelete);
+        _dl.deletePlayer(playerID);
     }
-    public void deleteRoom(Room roomToDelete)
+    public void deleteRoom(int roomID)
     {
-        _dl.deleteRoom(roomToDelete);
+        _dl.deleteRoom(roomID);
     }
     
     

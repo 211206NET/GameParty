@@ -104,27 +104,31 @@ public class DBParty : IRepo
 
 
     //Delete 
-    public void deleteAboutPlayer(AboutPlayer aboutPlayerToDelete)
+    public void deleteAboutPlayer(int aboutplayersID)
     {
-        _context.Remove(aboutPlayerToDelete);
+        AboutPlayer aboutPlayer = GetAboutPlayersByID(aboutplayersID);
+        _context.Remove(aboutPlayer);
         _context.SaveChanges();
         _context.ChangeTracker.Clear();
     }
-    public void deleteGame(Game gameToDelete)
+    public void deleteGame(int gameID)
     {
-        _context.Remove(gameToDelete);
+        Game game = GetGameByID(gameID);
+        _context.Remove(game);
         _context.SaveChanges();
         _context.ChangeTracker.Clear();
     }
-    public void deletePlayer(Player playerToDelete)
+    public void deletePlayer(int playerID)
     {
-        _context.Remove(playerToDelete);
+        Player player = GetPlayerByID(playerID);
+        _context.Remove(player);
         _context.SaveChanges();
         _context.ChangeTracker.Clear();
     }
-    public void deleteRoom(Room roomToDelete)
+    public void deleteRoom(int roomID)
     {
-        _context.Remove(roomToDelete);
+        Room room = GetRoomByID(roomID);
+        _context.Remove(room);
         _context.SaveChanges();
         _context.ChangeTracker.Clear();
     }
