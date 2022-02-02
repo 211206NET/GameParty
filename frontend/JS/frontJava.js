@@ -1,3 +1,19 @@
+const socket = io();
+
+const chatform = document.getElementById('ChatForm');
+socket.on('message', message => {
+    console.log(message);
+});
+
+//message submit 
+chatform.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const message = e.target.elements.message.value
+    console.log(message);
+})
+
+
+
 
 function LoginPlayer(){
     console.log("loginplayer was called ")

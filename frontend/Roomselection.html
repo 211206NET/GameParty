@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Party</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="text/javascript" src="Java.js"></script>
+</head>
+<body>
+    <H1> </H1>
+
+   
+      <h2> Create a room </h2>
+      
+      
+      <h2> Join a room </h2>
+      <p> Please enter game room code </p>
+      <label for="fname">Game Code</label><br>
+      <input type="number" id="gamecode" name="fname" value="enter code here"><br>
+      <form> <input type="button" value="">
+      </form>
+      <h2> manage account </h2>
+
+
+
+
+
+
+      <script src="/socket.io/socket.io.js"></script>
+
+      <script>
+        var socket = io();
+        var messages = document.getElementById('messages');
+        var form = document.getElementById('form');
+        var input = document.getElementById('input');
+  
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (input.value) {
+            socket.emit('chat message', input.value);
+            input.value = '';
+          }
+        });
+  
+        socket.on('chat message', function(msg) {
+          var item = document.createElement('li');
+          item.textContent = msg;
+          messages.appendChild(item);
+          window.scrollTo(0, document.body.scrollHeight);
+        });
+      </script>
+
+
+
+
+    </body>
+</html>
