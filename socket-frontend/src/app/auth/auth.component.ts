@@ -3,10 +3,10 @@ import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-auth-btn',
-  templateUrl: './auth-btn.component.html',
-  styleUrls: ['./auth-btn.component.css']
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.css']
 })
-export class AuthBtnComponent implements OnInit {
+export class AuthComponent implements OnInit {
 
   constructor(private auth: AuthService) { }
 
