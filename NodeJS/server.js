@@ -1,34 +1,26 @@
-const path = require('path');
-const http = require('http');
-const express = require('express');
-const socketio = require('socket.io');
-const { SocketAddress } = require('net');
-const PORT = 3000 || process.env.PORT;
-
-const app = express();
-const server = http.createServer(app);
-const io = socketio(server);
-
-//set static folder 
-app.use(express.static(path.join(__dirname, '../frontend')));
-
-
-// run when client connects
-io.on('connection', socketio => {
-    Console.log('New WS Connection...');
-    socket.emit('message', 'welcome to GameParty');
-    //when a user connects 
-    socket.broadcast.emit('message','New Player has joined');
-    //when user disconnects
-    socket.on('disconnect', () => {
-        io.emit('message', 'A user has left the chat');
-    });
-    Socket.on('chatmessage', (msg) => {
-      io.emit('message', message)
-    })
+const app = require('express')();
+const httpServer = require('http').createServer(app);
+const io = require('socket.io')(httpServer, {
+  cors: {origin : '*'}
 });
 
-server.listen(PORT, () => console.log('Server running on port',PORT));
+app.get('/', (req,res) => res.send('hello!'));
 
+const port = process.env.PORT || 3000;
 
+io.on('connection', (socket) => {
+  console.log('a user connected');
 
+  socket.on('message', (msg) => {
+    console.log(msg);
+    socket.broadcast.emit('message-broadcast', msg);
+   });
+
+  socket.on('disconnect', () => {
+    console.log('a user disconnected!');
+  });
+});
+
+httpServer.listen(port, () => 
+console.log(`listening on port ${port}`
+));
