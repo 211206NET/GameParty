@@ -25,7 +25,7 @@ export class ChatInboxComponent implements OnInit {
     element.style.background = 'white';
     element.style.padding =  '15px 30px';
     element.style.margin = '10px';
-    document.getElementById('message-list').appendChild(element);
+    document.getElementById('message-list')?.appendChild(element);
     }
   });
   }
@@ -37,7 +37,7 @@ export class ChatInboxComponent implements OnInit {
     element.style.padding =  '15px 30px';
     element.style.margin = '10px';
     element.style.textAlign = 'right';
-    document.getElementById('message-list').appendChild(element);
+    document.getElementById('message-list')?.appendChild(element);
     this.message = '';
   }
 }

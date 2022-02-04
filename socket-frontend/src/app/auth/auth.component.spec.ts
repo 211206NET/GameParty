@@ -1,14 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AuthModule } from '@auth0/auth0-angular';
-import { AuthBtnComponent } from './auth-btn.component';
+import { AuthComponent } from './auth.component';
 
-describe('AuthBtnComponent', () => {
-  let component: AuthBtnComponent;
-  let fixture: ComponentFixture<AuthBtnComponent>;
+describe('AuthComponent', () => {
+  let component: AuthComponent;
+  let fixture: ComponentFixture<AuthComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthBtnComponent ],
+      declarations: [ AuthComponent ],
       imports: [
         AuthModule.forRoot({
           domain: 'testing domain',
@@ -20,7 +20,7 @@ describe('AuthBtnComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthBtnComponent);
+    fixture = TestBed.createComponent(AuthComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
