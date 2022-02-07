@@ -11,7 +11,7 @@
     padding: 0;
  }
  .chat-messages-create-container{
-    background: #616161;
+    background: #353535;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -24,4 +24,11 @@
  .chat-messages-create-button {
     height: 50px;
     margin: auto 40px;
+    background-color: #3C6E71;
+ }
+ .chat-messages{
+   margin: auto;
+   width: 70%;
+   border: 4px #3C6E71;
+   padding: 10px;
  }
