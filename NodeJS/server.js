@@ -14,7 +14,7 @@ io.on('connection', (socket) => {
   socket.on('message', (msg) => {
     console.log(msg);
     socket.broadcast.emit('message-broadcast', msg);
-   });
+  });
 
   socket.on('disconnect', () => {
     console.log('a user disconnected!');
@@ -22,5 +22,5 @@ io.on('connection', (socket) => {
 });
 
 httpServer.listen(port, () => 
-console.log(`listening on port ${port}`
+console.log('listening on port ${port}'
 ));
