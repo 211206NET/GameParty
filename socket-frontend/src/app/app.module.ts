@@ -10,6 +10,8 @@ import { NavComponent } from './nav/nav.component';
 import { AboutPlayerComponent } from './Profile/about-player.component';
 import { environment } from 'src/environments/environment';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TicTacComponent } from './tic-tac/tic-tac.component';
+import { RockPaperScissorsComponent } from './rock-paper-scissors/rock-paper-scissors.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AuthComponent,
     NavComponent,
     AboutPlayerComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TicTacComponent,
+    RockPaperScissorsComponent
   ],
   imports: [
     BrowserModule,
