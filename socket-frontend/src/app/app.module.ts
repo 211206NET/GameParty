@@ -11,6 +11,7 @@ import { AboutPlayerComponent } from './Profile/about-player.component';
 import { environment } from 'src/environments/environment';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TicTacComponent } from './tic-tac/tic-tac.component';
+import { RockPaperScissorsComponent } from './rock-paper-scissors/rock-paper-scissors.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TicTacComponent } from './tic-tac/tic-tac.component';
     NavComponent,
     AboutPlayerComponent,
     WelcomeComponent,
-    TicTacComponent
+    TicTacComponent,
+    RockPaperScissorsComponent
   ],
   imports: [
     BrowserModule,

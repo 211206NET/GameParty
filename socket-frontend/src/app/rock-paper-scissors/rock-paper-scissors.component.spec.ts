@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TicTacComponent } from './tic-tac.component';
 
-describe('TicTacComponent', () => {
-  let component: TicTacComponent;
-  let fixture: ComponentFixture<TicTacComponent>;
+import { RockPaperScissorsComponent } from './rock-paper-scissors.component';
+
+describe('RockPaperScissorsComponent', () => {
+  let component: RockPaperScissorsComponent;
+  let fixture: ComponentFixture<RockPaperScissorsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TicTacComponent ]
+      declarations: [ RockPaperScissorsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TicTacComponent);
+    fixture = TestBed.createComponent(RockPaperScissorsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
