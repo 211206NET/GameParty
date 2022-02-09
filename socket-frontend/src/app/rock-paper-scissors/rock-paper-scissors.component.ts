@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-rock-paper-scissors',
   templateUrl: './rock-paper-scissors.component.html',
   styleUrls: ['./rock-paper-scissors.component.css']
+  
 })
 export class RockPaperScissorsComponent implements OnInit {
   ngOnInit(): void {
@@ -37,7 +38,7 @@ export class RockPaperScissorsComponent implements OnInit {
       this.status = '';
       this.userSelected = '';
       this.compSelected = '';
-    }, 1500);
+    }, 2000);
   }
 
   win(user: string, comp: string) {

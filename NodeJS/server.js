@@ -20,25 +20,32 @@ io.on('connection', (socket) => {
   console.log('a user connected');
   socket.emit("position", position);
     socket.on("move", data => {
+      console.log(data);
         switch(data) {
             case "left":
                 position.x -= 5;
+                socket.broadcast.emit("position", position);
                 socket.emit("position", position);
-                
+                console.log("called left ");
                 break;
             case "right":
                 position.x += 5;
+                socket.broadcast.emit("position", position);
                 socket.emit("position", position);
+                console.log("called right ");
                 
                 break;
             case "up":
                 position.y -= 5;
+                socket.broadcast.emit("position", position);
                 socket.emit("position", position);
-               
+                console.log("called");
                 break;
             case "down":
                 position.y += 5;
+                socket.broadcast.emit("position", position);
                 socket.emit("position", position);
+                console.log("called");
                 
                 break;
         }
