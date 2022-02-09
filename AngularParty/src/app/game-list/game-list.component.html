@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Games</h1>
+    <a routerLink="/createGame">Create a new Game</a>
+</div>
+<div class="container">
+    <table id="Game-table" class="table" *ngIf="allGame.length > 0 else noGame">
+        <thead class="table-header">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    GameName
+                </th>
+                <th>
+                    PlayerCount
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let game of allGame">
+                <td>{{game.id}}</td>
+                <td>{{game.gameName}}</td>
+                <td>{{game.playerCount}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noGame>
+        <p id="no-Game">
+            No games online
+        </p>
+    </ng-template>
+</div>
+

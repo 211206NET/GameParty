@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Create new Player</h1>
+    <a routerLink="/players">Go back to players</a>
+</div>
+<div class="container">
+    <div class="row half-width">
+        <form (ngSubmit)="processForm(newPlayerForm)" 
+        #newPlayerForm="ngForm">
+            <div class="form-group">
+                <label for="player-name">Player username:</label>
+                <input class="form-control" [(ngModel)]="player.username" type="text" id="player-username" name="player-username" #name="ngModel" required>               
+            </div>
+            <div class="form-group">
+                <label for="player-password">Player Password</label>
+                <input class="form-control" type="text" id="player-password" name="player-password" [(ngModel)]="player.password" #password="ngModel" required>
+            </div>
+            <div class="form-group">
+                <div *ngIf="displayFormSubmitError">
+                    There's something wrong with your form
+                </div>
+                <input type="submit" value="Create" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</div>

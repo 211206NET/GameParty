@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Create new Room</h1>
+    <a routerLink="/rooms">Go back to rooms</a>
+</div>
+<div class="container">
+    <div class="row half-width">
+        <form (ngSubmit)="processForm(newRoomForm)" 
+        #newRoomForm="ngForm">
+            <div class="form-group">
+                <label for="room-roomName">RoomName:</label>
+                <input class="form-control" [(ngModel)]="room.roomName" type="text" id="room-roomName" name="room-roomName" #roomName="ngModel" required>               
+            </div>
+            <div class="form-group">
+                <label for="player-roomCode">RoomCode:</label>
+                <input class="form-control" type="text" id="room-roomCode" name="room-roomCode" [(ngModel)]="room.roomCode" #roomCode="ngModel" required>
+            </div>
+            <div class="form-group">
+                <label for="player-playerCount">PlayerCount:</label>
+                <input class="form-control" type="text" id="room-playerCount" name="room-playerCount" [(ngModel)]="room.playerCount" #playerCount="ngModel" required>
+            </div>
+            <div class="form-group">
+                <div *ngIf="displayFormSubmitError">
+                    There's something wrong with your form
+                </div>
+                <input type="submit" value="Create" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</div>

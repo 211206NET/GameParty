@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Rooms</h1>
+    <a routerLink="/createRoom">Create a new Room</a>
+</div>
+<div class="container">
+    <table id="room-table" class="table" *ngIf="allRoom.length > 0 else noRoom">
+        <thead class="table-header">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    room name
+                </th>
+                <th>
+                    room code
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let room of allRoom">
+                <td>{{room.id}}</td>               
+                <td>{{room.roomName}}</td>
+                <td>{{room.roomCode}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noRoom>
+        <p id="no-Room">
+            No Rooms online
+        </p>
+    </ng-template>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Players</h1>
+    <a routerLink="/createPlayer">Create a new Player</a>
+    
+</div>
+<div class="container">
+    <table id="player-table" class="table" *ngIf="allPlayer.length > 0 else noPlayer">
+        <thead class="table-header">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    username
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of allPlayer">
+                <td>{{player.id}}</td>
+                <td>{{player.username}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noPlayer>
+        <p id="no-player">
+            No players online
+        </p>
+    </ng-template>
+</div>
