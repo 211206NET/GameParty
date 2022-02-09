@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Create new Game</h1>
+    <a routerLink="/games">Go back to Games</a>
+</div>
+<div class="container">
+    <div class="row half-width">
+        <form (ngSubmit)="processForm(newGameForm)" 
+        #newGameForm="ngForm">
+            <div class="form-group">
+                <label for="game-name">gamename:</label>
+                <input class="form-control" [(ngModel)]="game.gameName" type="text" id="game-gameName" name="game-gameName" #gameName="ngModel" required>               
+            </div>
+            <div class="form-group">
+                <label for="game-playerCount">playerCount</label>
+                <input class="form-control" type="text" id="game-playerCount" name="game-playerCount" [(ngModel)]="game.playerCount" #playerCount="ngModel" required>
+            </div>
+            <div class="form-group">
+                <div *ngIf="displayFormSubmitError">
+                    There's something wrong with your form
+                </div>
+                <input type="submit" value="Create" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</div>

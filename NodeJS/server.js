@@ -14,7 +14,7 @@ io.on('connection', (socket) => {
   socket.on('message', (msg) => {
     console.log(msg);
     socket.broadcast.emit('message-broadcast', msg);
-   });
+  });
 
   socket.on('disconnect', () => {
     console.log('a user disconnected!');
