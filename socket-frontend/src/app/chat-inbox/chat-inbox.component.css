@@ -32,3 +32,10 @@
    border: 4px #3C6E71;
    padding: 10px;
  }
+
+ .container{
+   max-width: 1300px;
+   text-align: center;
+   border-radius: 15px;
+   border-style: solid;
+   }
