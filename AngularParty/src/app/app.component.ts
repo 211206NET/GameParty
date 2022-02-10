@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild,ElementRef,OnInit  } from '@angular/core';
+import io from "socket.io-client";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularParty';
+  
+  @ViewChild("game")
+  private gameCanvas!: ElementRef;
+
+  public ngOnInit() {
+      
+  }
+
+  public ngAfterViewInit() {
+  }
+ 
+
 }
