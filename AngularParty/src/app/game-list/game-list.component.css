@@ -1,0 +1,9 @@
+.container{
+
+}
+#head{
+    text-align: center;
+    background-color: #f44336;
+    padding: 25px;
+    border-radius: 25px;
+}

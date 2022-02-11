@@ -1,0 +1,17 @@
+
+.link{
+    background-color: #f44336;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    border-radius: 15px;
+    
+}
+.form{
+padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+}

@@ -1,0 +1,14 @@
+.welcome{
+    font: 24px;
+    background-color: peachpuff;
+    padding: 25px;
+}
+.container{
+    max-width: 1300px;
+    text-align: center;
+    
+    }
+
+.imgsizer{
+    padding: 30px;
+}

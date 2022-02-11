@@ -1,12 +1,14 @@
 
 <div class="container">
-    <canvas #game width="640" height="480" style="border: 1px solid black"></canvas>
+    <div id="bruh">
+    <canvas #game width="700" height="500" style="border: 1px solid black"></canvas>
+    </div>
     <p>
-        <button (click)="thirdcube"(click)="move('right')">Right</button>
         <button (click)="thirdcube"(click)="move('left')">Left</button>
+        <button (click)="thirdcube"(click)="move('right')">Right</button>
         <button (click)="thirdcube"(click)="move('up')">Up</button>
         <button (click)="thirdcube" (click)="move('down')">Down</button>
-        <button (click)="randomCube()"> New cube</button>
+        <button (click)="randomCube()"> Start Game</button>
     </p>
     
     </div>
