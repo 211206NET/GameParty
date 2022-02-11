@@ -1,6 +1,8 @@
 .imgSizer{
 
     max-width: 300px;
+    border-radius: 15px;
+
 }
 
 .gameBoard{
@@ -23,11 +25,13 @@
 }
 
 .score-board{
+    margin-top: 15px;
     font-size: 24px;
     margin: auto;
     text-align: center;
 }
 .result{
+    margin-top: 15px;
     font-size: 18px;
     text-align: center;
 }
@@ -41,6 +45,7 @@ padding: 10px;
 text-align: center;
 }
 .head{
+    margin-top: 15px;
     background-color: #f44336 ;
     border-radius: 15px;
     padding: 20px;

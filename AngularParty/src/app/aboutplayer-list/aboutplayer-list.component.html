@@ -6,9 +6,7 @@
     <table id="aboutPlayer-table" class="table" *ngIf="allAboutPlayer.length > 0 else noAboutPlayer">
         <thead class="table-header">
             <tr>
-                <th>
-                    Id
-                </th>
+                
                 <th>
                     Username
                 </th>
@@ -26,7 +24,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let aboutPlayer of allAboutPlayer">
-                <td>{{aboutPlayer.id}}</td>
+                
                 <td>{{aboutPlayer.gameLibrary}}</td>
                 <td>{{aboutPlayer.favoriteGames}}</td>
                 <td>{{aboutPlayer.gamesWon}}</td>

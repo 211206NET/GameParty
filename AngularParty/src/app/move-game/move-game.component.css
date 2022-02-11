@@ -6,7 +6,30 @@
     border-radius: 15px;
     border-style: solid;
     }
-    #overlay{
+    #bruh{
         
+        background-image:('../assets/tugofwar.jpg');
+    }
+    .banner{
+        margin-top: 15px;
+        padding-top: 30px;
+        text-align: center;
+        background-color: #f44336;
+        padding: 10px;
+        border-radius: 25px;
     }
     
+    .button{
+        padding-top: 30px;
+        text-align: center;
+        background-color: #f44336;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    canvas{
+        margin-top: 15px;
+        padding: 15px;
+        border: 20px;
+        border-style: solid;
+        border-radius: 25px;
+    }
