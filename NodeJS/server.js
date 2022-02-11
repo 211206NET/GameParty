@@ -15,7 +15,6 @@ var position = {
 };
 
 const port = process.env.PORT || 3000;
-
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.emit("position", position);
@@ -57,4 +56,3 @@ io.on('connection', (socket) => {
 httpServer.listen(port, () => 
 console.log('listening on port ${port}'
 ));
-

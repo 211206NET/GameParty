@@ -18,6 +18,23 @@ export class TicTacComponent implements OnInit {
     private socket: any;
     
 
+<<<<<<< Updated upstream
+=======
+    public randomCube(){
+      var randomx= this.getRandomInt();
+      var randomy= this.getRandomInt();
+      this.context = this.gameCanvas.nativeElement.getContext("2d");
+      this.context.fillRect(randomx, randomy, 20, 20);
+      return randomx;
+      return randomy;
+      
+    }
+
+    public thirdcube(randomx: any,randomy: any){
+      this.context = this.gameCanvas.nativeElement.getContext("2d");
+      this.context.fillRect(randomx, randomy, 20, 20);
+    }
+>>>>>>> Stashed changes
     public ngOnInit() {
         this.socket = io("http://localhost:3000");
     }
