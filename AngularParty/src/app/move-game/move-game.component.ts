@@ -13,8 +13,8 @@ export class MoveGameComponent implements OnInit {
   private socket: any;
   
   position = {
-    x: 200,
-    y: 200
+    x: 340,
+    y: 250
   };
   
   public YouWon(){
@@ -23,9 +23,18 @@ export class MoveGameComponent implements OnInit {
  public getRandomInt() {
     return Math.floor(Math.random() * 200);
   }
-
-  public randomCube(){
+  playeronescore =0;
+  playertwoscore =0;
+  resetscores(){
+  this.playeronescore =0;
+  this.playertwoscore =0;
+  }
+  playerone(){
+    this.playeronescore ++;
     
+  }
+  playertwo(){
+    this.playertwoscore ++;
     
   }
 
@@ -71,6 +80,11 @@ switch(direction) {
       case "down":
       this.position.y += 5;
       break;
+      
+      case"restart":
+      this.position.x =340;
+      this.position.y =250;
+
       
 }
 this.MoveCube(this.position);

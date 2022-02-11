@@ -12,9 +12,7 @@
     <table id="room-table" class="table" *ngIf="allRoom.length > 0 else noRoom">
         <thead class="table-header">
             <tr>
-                <th>
-                    Id
-                </th>
+                
                 <th>
                     room name
                 </th>
@@ -25,7 +23,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let room of allRoom">
-                <td>{{room.id}}</td>               
+                              
                 <td>{{room.roomName}}</td>
                 <td>{{room.roomCode}}</td>
             </tr>

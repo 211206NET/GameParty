@@ -10,8 +10,8 @@ const Http = require("http").Server(Express);
 
 app.get('/', (req,res) => res.send('hello!'));
 var position = {
-  x: 200,
-  y: 200
+  x: 340,
+  y: 250
 };
 
 const port = process.env.PORT || 3000;
@@ -47,6 +47,12 @@ io.on('connection', (socket) => {
                 console.log("called");
                 
                 break;
+            case "restart":
+              position.x =340;
+              position.y =250;
+              socket.broadcast.emit("position", position);
+              socket.emit("position", position);
+
         }
     });
 
