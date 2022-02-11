@@ -1,16 +1,27 @@
 <div class="container">
+<<<<<<< HEAD
     <h1>AboutPlayer</h1>
     <a class="link" routerLink="/createAboutPlayer">Create a new about player</a>
+=======
+    <h1>Leaderboard</h1>
+    <a class="link" routerLink="/createAboutPlayer">Add to leadeboard</a>
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
 </div>
 <div class="container">
     <table id="aboutPlayer-table" class="table" *ngIf="allAboutPlayer.length > 0 else noAboutPlayer">
         <thead class="table-header">
             <tr>
+<<<<<<< HEAD
                 <th>
                     Id
                 </th>
                 <th>
                     gameLibrary
+=======
+                
+                <th>
+                    Username
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
                 </th>
                 <th>
                     favoriteGames
@@ -21,19 +32,31 @@
                 <th>
                     gamesLost
                 </th>
+<<<<<<< HEAD
                 <th>
                     player
                 </th>
+=======
+                
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let aboutPlayer of allAboutPlayer">
+<<<<<<< HEAD
                 <td>{{aboutPlayer.id}}</td>
+=======
+                
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
                 <td>{{aboutPlayer.gameLibrary}}</td>
                 <td>{{aboutPlayer.favoriteGames}}</td>
                 <td>{{aboutPlayer.gamesWon}}</td>
                 <td>{{aboutPlayer.gamesLost}}</td>
+<<<<<<< HEAD
                 <td>{{aboutPlayer.player}}</td>
+=======
+                
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
             </tr>
         </tbody>
     </table>

@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@angular/animations": "~13.2.0",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
@@ -41,5 +42,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.5.2"
+=======
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
   }
 }

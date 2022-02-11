@@ -1,6 +1,11 @@
 .imgSizer{
 
     max-width: 300px;
+<<<<<<< HEAD
+=======
+    border-radius: 15px;
+
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
 }
 
 .gameBoard{
@@ -23,11 +28,19 @@
 }
 
 .score-board{
+<<<<<<< HEAD
+=======
+    margin-top: 15px;
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
     font-size: 24px;
     margin: auto;
     text-align: center;
 }
 .result{
+<<<<<<< HEAD
+=======
+    margin-top: 15px;
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
     font-size: 18px;
     text-align: center;
 }
@@ -41,6 +54,10 @@ padding: 10px;
 text-align: center;
 }
 .head{
+<<<<<<< HEAD
+=======
+    margin-top: 15px;
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
     background-color: #f44336 ;
     border-radius: 15px;
     padding: 20px;

@@ -22,12 +22,17 @@ export class AboutPlayerFormComponent implements OnInit {
     gameLibrary: '',
     favoriteGames: '',
     gamesWon: 0,
+<<<<<<< HEAD
     gamesLost: 0,
     player: {
       id: 0,
       username: '',
       password: ''
     }
+=======
+    gamesLost: 0
+    
+>>>>>>> 5bc22aa90b528528a3ec20e5a41f489fee3f05a6
   }
   displayFormSubmitError: boolean = false;
 
