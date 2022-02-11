@@ -14,6 +14,11 @@ export class GameListComponent implements OnInit {
 
   allGame: Game[] = [];
 
+  public movegame(){
+
+  }
+  
+  public rockgame(){}
   ngOnInit(): void {
     this.apiService.getAllGames().then((gameArray) =>
     {

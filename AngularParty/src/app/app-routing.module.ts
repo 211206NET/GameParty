@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutPlayerFormComponent } from './about-player-form/about-player-form.component';
 import { AboutplayerListComponent } from './aboutplayer-list/aboutplayer-list.component';
@@ -8,6 +8,7 @@ import { PlayerFormComponent } from './player-form/player-form.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { RoomFormComponent } from './room-form/room-form.component';
 import { RoomListComponent } from './room-list/room-list.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -41,9 +42,11 @@ const routes: Routes = [
   {
     path: 'createRoom',
     component: RoomFormComponent
+  },
+  {
+  path: 'welcome',
+  component: WelcomeComponent
   }
-
-
 ];
 
 @NgModule({

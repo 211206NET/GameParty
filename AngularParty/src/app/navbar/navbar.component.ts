@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 goToList(): void
 {
-  this.router.navigate(['']);
+  this.router.navigate(['/welcome'])
 }
 
   ngOnInit(): void {

@@ -1,6 +1,12 @@
 <div class="container">
     <h1>Rooms</h1>
-    <a routerLink="/createRoom">Create a new Room</a>
+    <a class="link"  routerLink="/createRoom">Create a new Room</a>
+
+    <h1>Join a room with code</h1>
+    <form>
+        <input class="form" type="text"  name="fname"> <br>
+    </form>
+    <a class="link" routerLink="/games">join room</a>
 </div>
 <div class="container">
     <table id="room-table" class="table" *ngIf="allRoom.length > 0 else noRoom">

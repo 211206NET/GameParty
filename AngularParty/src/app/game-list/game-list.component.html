@@ -1,7 +1,12 @@
-<div class="container">
-    <h1>Games</h1>
-    <a routerLink="/createGame">Create a new Game</a>
+<div id ="head" class="container">
+    <h1>Welcome to your room</h1>
+    <br>
+    <h2>Feel free to stay and hangout</h2>
+    <!-- <a routerLink="/createGame">Create a new Game</a> -->
 </div>
+
+
+<!--
 <div class="container">
     <table id="Game-table" class="table" *ngIf="allGame.length > 0 else noGame">
         <thead class="table-header">
@@ -32,4 +37,7 @@
         </p>
     </ng-template>
 </div>
-
+ -->
+<app-chatroom></app-chatroom>
+ <app-rockpaperscissors></app-rockpaperscissors>
+ <app-move-game></app-move-game>
