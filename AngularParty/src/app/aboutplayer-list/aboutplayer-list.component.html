@@ -1,6 +1,6 @@
 <div class="container">
-    <h1>AboutPlayer</h1>
-    <a class="link" routerLink="/createAboutPlayer">Create a new about player</a>
+    <h1>Leaderboard</h1>
+    <a class="link" routerLink="/createAboutPlayer">Add to leadeboard</a>
 </div>
 <div class="container">
     <table id="aboutPlayer-table" class="table" *ngIf="allAboutPlayer.length > 0 else noAboutPlayer">
@@ -10,7 +10,7 @@
                     Id
                 </th>
                 <th>
-                    gameLibrary
+                    Username
                 </th>
                 <th>
                     favoriteGames
@@ -21,9 +21,7 @@
                 <th>
                     gamesLost
                 </th>
-                <th>
-                    player
-                </th>
+                
             </tr>
         </thead>
         <tbody>
@@ -33,7 +31,7 @@
                 <td>{{aboutPlayer.favoriteGames}}</td>
                 <td>{{aboutPlayer.gamesWon}}</td>
                 <td>{{aboutPlayer.gamesLost}}</td>
-                <td>{{aboutPlayer.player}}</td>
+                
             </tr>
         </tbody>
     </table>

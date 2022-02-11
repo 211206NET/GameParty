@@ -6,5 +6,5 @@ export type AboutPlayer = {
     favoriteGames: string; 
     gamesWon: number; 
     gamesLost: number; 
-    player: Player;
+    
 }
