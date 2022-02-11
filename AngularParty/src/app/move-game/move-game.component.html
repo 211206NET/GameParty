@@ -1,0 +1,31 @@
+
+<div class="container">
+    
+    <div class="banner">
+       <h1>Tug of war</h1>
+        <h2>Player 1 score: {{playeronescore}}</h2>
+        <h2>Player 2 score: {{playertwoscore}} </h2>
+    </div>
+
+    <canvas class="canvas" #game width="700" height="500" style="border: 1px solid black"></canvas>
+    
+    <p>
+        <button class="button" (click)="thirdcube"(click)="move('left')">Left</button>
+        <button class="button" (click)="thirdcube"(click)="move('right')">Right</button>
+        <button class="button" (click)="thirdcube"(click)="move('up')">Up</button>
+        <button class="button" (click)="thirdcube" (click)="move('down')">Down</button>
+    </p>
+    <p>
+        <button class="button" (click)="move('restart')"> Start Game</button>
+    </p>
+    <h3>Winner</h3>
+    <p>
+        <button class="button" (click)="playerone()"> playerone </button>
+        <button class="button" (click)="playertwo()"> playertwo </button>
+    </p>
+    <p>
+        <button class="button" (click)="resetscores()"> reset </button>
+
+    </p>
+    
+    </div>

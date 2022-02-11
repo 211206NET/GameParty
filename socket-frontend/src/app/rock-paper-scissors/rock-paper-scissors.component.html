@@ -1,0 +1,38 @@
+<div class="container">
+
+<h1> Welcome to rock Paper Scissors</h1>
+<h2> Compete against the most advanced AI in the industry*</h2>
+
+
+<div class="score-board">
+    <div class="badge" id="user-label">user :</div>
+    <span id="user-score">{{userScore}}</span>:
+    <div class="badge" id="comp-label">comp : </div>
+    <span id="comp-score">{{compScore}}</span>
+
+  </div>
+  
+  <div class="result">
+    <div class="badge" id="user-label">user selected: {{userSelected}}</div>
+    <div class="badge" id="comp-label">comp selected: {{compSelected}}</div>
+    <p *ngIf="status">{{userSelected}} {{action}} {{compSelected}}{{status}} </p>
+  </div>
+  
+  <p id="action-message" *ngIf="!status">Click on a picture to select</p>
+  <p id="action-message" *ngIf="status">Wait...</p>
+  
+  <div class="gameBoard">
+    <div class="choice" id="rock">
+      <img class= "imgSizer" src="../../assets/rock.png" (click)='userPick("rock")'>
+    </div>
+    <div class="choice" id="paper">
+      <img class= "imgSizer" src="../../assets/paper.png" (click)='userPick("paper")'>
+    </div>
+    <div class="choice" id="scissors">
+      <img class= "imgSizer" src="../../assets/scissors.png" (click)='userPick("scissors")'>
+    </div>
+  </div>
+
+<p>* not actually scientifcally proven</p>
+
+</div>

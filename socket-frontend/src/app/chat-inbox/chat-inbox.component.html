@@ -1,0 +1,24 @@
+
+
+  <div class="container">
+  <h1> Welcome to GameParty</h1>
+  <h2> Feel free to chat and message</h2>
+
+
+<div class="chat-messages">
+    <div class="chat-messages-show-container">
+      <ul class="chat-messages-show-list" id="message-list">
+      <li id="message-list"></li>
+    </ul>
+    </div>
+    
+    <div class="chat-messages-create-container"> 
+      <input class="chat-messages-create-input" type="text" [(ngModel)]="message">
+      <button  class="chat-messages-create-button" (click)="SendMessage()"> 
+        Send 
+      </button>
+    </div>
+</div>
+</div>
+
+
