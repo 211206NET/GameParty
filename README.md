@@ -6,7 +6,7 @@ Team Members: Sam Hammond, Garrett Morgan, Terrence Browning, Christian Francois
 # <h2 align="center"> Overview: </h2>
 <p align="center">
 <br>
-An app for adding, and talking to friends. Create an account and create a room to talk about your interests. Use the chat to discuss your interests or play a game with your friends. They be will be able to keep track of your wins and loses in those games.
+An app for adding, and talking to friends. Create an account and create a room to talk about your interests. Use the chat to discuss your interests. Use the room to play a game of tug of war or rock paper scissors with your friends. They be will be able to keep track of your wins and loses in those games.
 </p>
 <h3 align="left ">Functionality:</h3>
 <br>
@@ -18,8 +18,10 @@ An app for adding, and talking to friends. Create an account and create a room t
 <br>
 <h4 align="left "> Code Stack </h4>
 - C#
-- Xunit testing 
+- TDD
+- Jasmine
+- Karma
 - SQL 
 - Serilog 
 - ASP.NET
-- socket.io
+- Socket.IO
