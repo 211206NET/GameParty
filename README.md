@@ -1,4 +1,4 @@
-## <h1 align="center">Mario-Party</h1>
+## <h1 align="center">Game Party</h1>
 P2
 
 Team Members: Sam Hammond, Garrett Morgan, Terrence Browning, Christian Francois, Dennis Sanders
