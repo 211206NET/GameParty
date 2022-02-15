@@ -10,18 +10,18 @@ An app for adding, and talking to friends. Create an account and create a room t
 </p>
 <h3 align="left ">Functionality:</h3>
 <br>
-- Use Auth0 to signup and login
-- Users can add an about me to add your favorite games
-- Create a room
-- Chat in the room or play games with friends
-- Get added to the Leaderboard
+* Use Auth0 to signup and login
+* Users can add an about me to add your favorite games
+* Create a room
+* Chat in the room or play games with friends
+* Get added to the Leaderboard
 <br>
 <h4 align="left "> Code Stack </h4>
-- C#
-- TDD
-- Jasmine
-- Karma
-- SQL 
-- Serilog 
-- ASP.NET
-- Socket.IO
+* C#
+* TDD
+* Jasmine
+* Karma
+* SQL 
+* Serilog 
+* ASP.NET
+* Socket.IO
